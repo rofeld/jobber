@@ -7,11 +7,10 @@ function job_call
   local status=1
   local count=0
 
-  local script=$1
-
   while [ "$status" -ne 0 ];
     do
-        sh $script
+        echo "job call ARGs: $@"
+        sh "$@"
         status=$?
         if [ "$status" -eq 0 ]; then
           break
@@ -31,10 +30,10 @@ function job_call
 
 function job_exec
 {
+  echo "job exec ARGs: $@"
   local status=0
-  local script=$1
   local COUNTER=0
-  job_call $script &
+  job_call "$@" &
   local jobber_pid=$!
   wait $jobber_pid || let "COUNTER+=1"
   status=$COUNTER

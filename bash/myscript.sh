@@ -1,5 +1,6 @@
 #!/bin/sh
 
 echo "start - myscript.sh"
-sleep 25
+echo "ARGs: $@"
+sleep 5
 echo "finih - myscript.sh"
