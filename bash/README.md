@@ -5,6 +5,7 @@ jobber_func.sh - functions file with the logic to retry running command on failu
 env.sh - global vars setup; used in jobber_func.sh
 
 myscript.sh - dummy script to test the functionality; it could be any script name here
+
 ad_hoc_template.sh - example of using retry functionality in ad hoc / custom script or shell
 
 job.flow - example of script execution control file
