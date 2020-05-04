@@ -15,9 +15,15 @@ the first line should be cmd=n (where n is the number of commands to execute); 1
 cat job.flow
 
   cmd=1 # execute next line and wait for completion
+
   myscript.sh "ONE"
+
   cmd=1 # execute next line and wait for completion
+
   myscript.sh "TWO"
+
   cmd=2 # execute next two lines in parallel and wait for completion
+
   myscript.sh "THREE"
+  
   myscript.sh "FOUR"
