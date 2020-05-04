@@ -1,0 +1,7 @@
+cmd=1
+myscript.sh "ONE"
+cmd=1
+myscript.sh "TWO"
+cmd=2
+myscript.sh "THREE"
+myscript.sh "FOUR"
