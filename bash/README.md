@@ -31,3 +31,5 @@ cat job.flow
   myscript.sh "THREE"
 
   myscript.sh "FOUR"
+
+Please note: no empty lines in job.flow file.
