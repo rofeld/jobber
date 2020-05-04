@@ -1,7 +1,5 @@
 # jobber
 
-# jobber
-
 jobber_func.sh - functions file with the logic to retry running command on failure
 env.sh - global vars setup; used in jobber_func.sh
 myscript.sh - dummy script to test the functionality; it could be any script name here
@@ -25,5 +23,5 @@ cat job.flow
   cmd=2 # execute next two lines in parallel and wait for completion
 
   myscript.sh "THREE"
-  
+
   myscript.sh "FOUR"
