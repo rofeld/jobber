@@ -1,4 +1,4 @@
-# jobber
+# jobber - Resilient, Retriable, Restartable Task and Flow Framework
 
 jobber_func.sh - functions file with the logic to retry running command on failure
 
@@ -10,11 +10,11 @@ ad_hoc_template.sh - example of using retry functionality in ad hoc / custom scr
 
 job.flow - example of script execution control file
 
-job_read.sh - execution of job.flow control file
+job_exec.sh - execution of job.flow control file
 
 job.flow syntax rules:
 
-the first line should be cmd=n (where n is the number of commands to execute); 1 - in a sequence, and greater the 1 - in parallel
+the first line should be cmd=n (where n is unique number for the script)
 
 cat job.flow
 
@@ -22,11 +22,11 @@ cat job.flow
 
   myscript.sh "ONE"
 
-  cmd=1 # execute next line and wait for completion
+  cmd=2 # execute next line and wait for completion
 
   myscript.sh "TWO"
 
-  cmd=2 # execute next two lines in parallel and wait for completion
+  cmd=3 # execute next two lines in parallel and wait for completion
 
   myscript.sh "THREE"
 
