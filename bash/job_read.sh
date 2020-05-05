@@ -66,15 +66,14 @@ do
 done < "$input_tmp"
 
 if [ "$WAIT_ERROR" -gt 0 ]; then
-  break
-fi
-
-for pid in ${pids[*]}; do
-    wait $pid || let "WAIT_ERROR+=1"
-done
-
-if [ "$WAIT_ERROR" -gt 0 ]; then
   exit 1
 else
-  rm -if ${current_file}
+  for pid in ${pids[*]}; do
+      wait $pid || let "WAIT_ERROR+=1"
+  done
+  if [ "$WAIT_ERROR" -gt 0 ]; then
+    exit 1
+  else
+    rm -if ${current_file}
+  fi
 fi

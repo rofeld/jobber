@@ -2,5 +2,5 @@
 
 echo "start - myscript.sh"
 echo "ARGs: $@"
-sleep 5
+sleep 25
 echo "finih - myscript.sh"
