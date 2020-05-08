@@ -35,6 +35,8 @@ do
       done
     fi
 
+    unset pids
+
     if [ "$WAIT_ERROR" -gt 0 ]; then
       break
     fi
